@@ -26,6 +26,5 @@ spec:
       containers:
       - name: react-kubernetes
         image: gcr.io/elena-circle-ci-demo/web-app
-        imagePullPolicy: Never
         ports:
         - containerPort: 4100
