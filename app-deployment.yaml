@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: react-app
+  labels:
+    app: frontend
+spec:
+  selector:
+    matchLabels:
+      app: react
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: react
+        tier: frontend
+    spec:
+      containers:
+        - image: gcr.io/elena-circle-ci-demo/web-app
+          name: react-web-app
+          ports:
+            - containerPort: 4100
+              name: react

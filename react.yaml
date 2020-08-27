@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-kubernetes
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 4100
+  selector:
+    app: react-kubernetes
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-kubernetes
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: react-kubernetes
+  template:
+    metadata:
+      labels:
+        app: react-kubernetes
+    spec:
+      containers:
+      - name: react-kubernetes
+        image: gcr.io/elena-circle-ci-demo/web-app
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 4100
