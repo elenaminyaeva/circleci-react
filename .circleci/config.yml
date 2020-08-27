@@ -71,7 +71,7 @@ jobs:
       - gcp-gke/rollout-image:
           cluster: circle-ci-cluster
           deployment: circle-ci-cluster
-          container: react-frontend
+          container: dominic-backend
           image: gcr.io/elena-circle-ci-demo/web-app
 
 
