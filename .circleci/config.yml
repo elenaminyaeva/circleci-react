@@ -71,7 +71,7 @@ jobs:
       - gcp-gke/rollout-image:
           cluster: circle-ci-react-cluster
           deployment: react-kubernetes
-          container: react-frontend
+          container: react-kubernetes
           image: gcr.io/elena-circle-ci-demo/web-app
 
 

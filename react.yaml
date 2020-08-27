@@ -27,6 +27,5 @@ spec:
       containers:
       - name: react-kubernetes
         image: gcr.io/elena-circle-ci-demo/web-app
-        name: react-frontend
         ports:
         - containerPort: 4100
