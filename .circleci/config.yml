@@ -70,8 +70,8 @@ jobs:
       # Update a deployment's Docker image.
       - gcp-gke/rollout-image:
           cluster: circle-ci-react-cluster
-          deployment: circle-ci-react-cluster
-          container: dominic-backend
+          deployment: react-kubernetes
+          container: react-frontend
           image: gcr.io/elena-circle-ci-demo/web-app
 
 
