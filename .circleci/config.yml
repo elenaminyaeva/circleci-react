@@ -63,7 +63,7 @@ jobs:
       - run: gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
       - run: gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
       - gcp-gke/update-kubeconfig-with-credentials:
-          cluster: circle-ci-cluster
+          cluster: circle-ci-react-cluster
           gcloud-service-key: GCLOUD_SERVICE_KEY
           google-compute-zone: GOOGLE_COMPUTE_ZONE
           google-project-id: GOOGLE_PROJECT_ID
