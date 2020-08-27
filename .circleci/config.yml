@@ -69,8 +69,8 @@ jobs:
           google-project-id: GOOGLE_PROJECT_ID
       # Update a deployment's Docker image.
       - gcp-gke/rollout-image:
-          cluster: circle-ci-cluster
-          deployment: circle-ci-cluster
+          cluster: circle-ci-react-cluster
+          deployment: circle-ci-react-cluster
           container: dominic-backend
           image: gcr.io/elena-circle-ci-demo/web-app
 
